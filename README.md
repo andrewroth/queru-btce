@@ -14,6 +14,7 @@ KISS BTC-E API Access from Ruby.
 ### Cons:
 
 - Not much abstraction, you should know BTC-e API.
+- Its in **BETA** status. Not production tested until now.
 
 ## Installation
 
