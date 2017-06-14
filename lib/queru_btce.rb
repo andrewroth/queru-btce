@@ -2,6 +2,7 @@ require 'json'
 require 'open-uri'
 require 'net/http'
 require 'ostruct'
+require 'cgi'
 
 module QueruBtce
   @api_key = ''
