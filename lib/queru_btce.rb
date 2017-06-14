@@ -17,10 +17,10 @@ module QueruBtce
 
   def self.trade_api(m, opts = {})
     opts[:method] = m
+    opts[:nonce] = nonce
     payload = opts.collect do |key, val|
       "#{key}=#{CGI::escape(val.to_s)}"
     end.join('&')
-    opts[:nonce] = nonce
 
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
