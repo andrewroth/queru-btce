@@ -7,9 +7,9 @@ KISS BTC-E API Access from Ruby.
 - No config file and no framework dependency.
 - No weird abstractions, you can follow BTC-e API specs.
 - Returns an object, keys are methods.
-- Really few error abstraction, and exceptions are raised.
+- Really few error abstraction, exceptions are raised.
 - Nounce is enforced, I don't expect damm nounce error.
-- Tests for the public API (rake test)
+- Tests for the public API (rake test).
 
 ### Cons:
 
@@ -42,3 +42,7 @@ Responses are hashes and any errors are raised as exception, your program can ha
 ## Contributing
 
 Pull requests, issues and comments are welcome the most of the days.
+
+## Thanks
+
+To [Brock Harris](https://github.com/BrockHarris), I did started from his gem.
