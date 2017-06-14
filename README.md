@@ -5,7 +5,7 @@ KISS BTC-E API Access from Ruby.
 ### Pros:
 
 - No config file and no framework dependency.
-- No weird abstractions, you can follow BTC-e API specs:
+- No weird abstractions, you can follow BTC-e API specs.
 - Returns an object, keys are methods.
 - Really few error abstraction, and exceptions are raised.
 - Nounce is enforced, I don't expect damm nounce error.
