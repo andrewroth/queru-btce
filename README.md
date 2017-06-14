@@ -21,7 +21,7 @@ KISS BTC-E API Access from Ruby.
 Gemfile:
 
 ```ruby
-gem 'queru-btce'
+gem 'queru_btce'
 ```
 
 Execute:

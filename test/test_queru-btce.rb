@@ -1,6 +1,6 @@
 require 'minitest/autorun'
 require 'shoulda/context'
-require 'QueruBtce'
+require 'queru_btce'
 
 class TestQueruBtce < Minitest::Test
   context 'QueruBtce Module' do

@@ -2,10 +2,10 @@
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'QueruBtce/version.rb'
+require 'queru_btce/version.rb'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'queru-btce'
+  spec.name          = 'queru_btce'
   spec.version       = QueruBtce::VERSION
   spec.authors       = ['Queru AKA Jorge Fuertes']
   spec.email         = ['jorge@jorgefuertes.com']
