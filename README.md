@@ -3,6 +3,10 @@
 KISS BTC-E API Access from Ruby.
 No config file and no framework dependency.
 
+# Don't use it!
+
+I'm recoding all the gem, you have been warned.
+
 ## Installation
 
 Gemfile:
