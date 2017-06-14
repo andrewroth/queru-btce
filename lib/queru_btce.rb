@@ -22,8 +22,6 @@ module QueruBtce
       "#{key}=#{CGI::escape(val.to_s)}"
     end.join('&')
 
-    puts "CALLING TRADE API M:#{m} PAYLOAD:#{payload}"
-
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
     Net::HTTP.start('btc-e.com', 443, use_ssl: true) do |http|
@@ -79,9 +77,9 @@ module QueruBtce
 
   def self.method_missing(m, *args)
     if trade_api_methods.key? m
-      trade_api m, *args
+      trade_api trade_api_methods[m], *args
     elsif public_api_methods.key? m
-      public_api m, *args
+      public_api[m], *args
     else
       super
     end
