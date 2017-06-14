@@ -20,16 +20,21 @@ KISS BTC-E API Access from Ruby.
 
 Gemfile:
 
-  gem 'queru-btce'
+```ruby
+gem 'queru-btce'
+```
 
 Execute:
 
-  $ bundle
+```bash
+$ bundle
+```
 
 Or install:
 
-  $ gem install queru-btce
-
+```bash
+$ gem install queru-btce
+```
 
 ## Usage
 
@@ -38,6 +43,18 @@ Responses are hashes and any errors are raised as exception, your program can ha
 
 - [BTC-E Trade API Documentation](https://btc-e.com/api/documentation)
 - [BTC-E Public API Documentation](https://btc-e.com/api/3/docs)
+
+You can call any BTC-e API methods this way:
+
+```ruby
+QueruBtce.info
+
+QueruBtce.ticker(:btc_usd)
+
+QueruBtce.ticker(:btc_usd, :eth_usd)
+```
+
+More docs to come.
 
 ## Contributing
 
