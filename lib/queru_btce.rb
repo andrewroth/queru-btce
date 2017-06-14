@@ -20,6 +20,7 @@ module QueruBtce
     payload = opts.collect do |key, val|
       "#{key}=#{CGI::escape(val.to_s)}"
     end.join('&')
+    opts[:nonce] = nonce
 
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
