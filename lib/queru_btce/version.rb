@@ -1,3 +1,3 @@
 module QueruBtce
-  VERSION = '0.0.2b'.freeze
+  VERSION = '1.0'.freeze
 end
