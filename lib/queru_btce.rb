@@ -22,6 +22,8 @@ module QueruBtce
       "#{key}=#{CGI::escape(val.to_s)}"
     end.join('&')
 
+    puts "CALLING TRADE API M:#{m} P:#{pair} PAYLOAD:#{payload}"
+
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
     Net::HTTP.start('btc-e.com', 443, use_ssl: true) do |http|
@@ -36,7 +38,6 @@ module QueruBtce
   end
 
   def self.public_api(m, *pair)
-    puts "CALLING TRADE API M:#{m} P:#{pair}"
     if pair
       pair = pair.join('-') if pair.is_a? Array
       JSON.parse open("https://btc-e.com/api/3/#{m}/#{pair}").read, object_class: OpenStruct
