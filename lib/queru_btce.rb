@@ -1,8 +1,9 @@
-require 'json'
-require 'open-uri'
-require 'net/http'
-require 'ostruct'
 require 'cgi'
+require 'json'
+require 'net/http'
+require 'openssl'
+require 'open-uri'
+require 'ostruct'
 
 module QueruBtce
   @api_key = ''
