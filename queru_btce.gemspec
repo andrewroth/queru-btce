@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.version       = QueruBtce::VERSION
   spec.authors       = ['Queru AKA Jorge Fuertes']
   spec.email         = ['jorge@jorgefuertes.com']
-  spec.summary       = 'KISS BTC-E API Access from Ruby'
-  spec.description   = 'Supports all API methods and currency pairs.'
+  spec.summary       = 'KISS BTC-e API Access from Ruby'
+  spec.description   = 'KISS and modern BTC-e API access'
   spec.homepage      = 'https://github.com/jorgefuertes/queru-btce'
   spec.license       = 'MIT'
 
