@@ -79,7 +79,7 @@ module QueruBtce
     if trade_api_methods.key? m
       trade_api trade_api_methods[m], *args
     elsif public_api_methods.key? m
-      public_api[m], *args
+      public_api public_api_methods[m], *args
     else
       super
     end
