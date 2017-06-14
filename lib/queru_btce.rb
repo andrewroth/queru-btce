@@ -36,6 +36,7 @@ module QueruBtce
   end
 
   def self.public_api(m, *pair)
+    puts "CALLING TRADE API M:#{m} P:#{pair}"
     if pair
       pair = pair.join('-') if pair.is_a? Array
       JSON.parse open("https://btc-e.com/api/3/#{m}/#{pair}").read, object_class: OpenStruct
