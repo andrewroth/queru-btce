@@ -4,8 +4,8 @@ require 'net/http'
 require 'ostruct'
 
 module QueruBtce
-  @api_key = false
-  @api_secret = false
+  @api_key = ''
+  @api_secret = ''
   @last_nonce = Time.now.to_i
 
   def self.credentials(key: '', secret: '')
@@ -13,7 +13,7 @@ module QueruBtce
     @api_secret = secret
   end
 
-  def self.trade_api(m, *opts)
+  def self.trade_api(m, opts = {})
     opts[:method] = m
     payload = opts.collect do |key, val|
       "#{key}=#{CGI::escape(val.to_s)}"
