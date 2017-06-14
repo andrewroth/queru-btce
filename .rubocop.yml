@@ -1,0 +1,46 @@
+LineLength:
+  Max: 120
+
+Style/AccessorMethodName:
+  Enabled: false
+Style/AndOr:
+  Enabled: false
+Style/ColonMethodCall:
+  Enabled: false
+Style/CommandLiteral:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Style/FileName:
+  Enabled: false
+Style/FrozenStringLiteralComment:
+  Enabled: false
+Style/Not:
+  Enabled: false
+Style/RedundantBegin:
+  Enabled: false
+Metrics/ClassLength:
+  Max: 300
+Metrics/AbcSize:
+  Max: 150
+Metrics/CyclomaticComplexity:
+  Max: 50
+Metrics/MethodLength:
+  Max: 100
+Metrics/PerceivedComplexity:
+  Max: 100
+Metrics/ParameterLists:
+  Max: 15
+Metrics/ModuleLength:
+  Max: 200
+Metrics/BlockLength:
+  Max: 100
+
+Lint/ParenthesesAsGroupedExpression:
+  Enabled: false
+Lint/UselessComparison:
+  Exclude:
+    - test/test_queru-btce.rb
+
+AllCops:
+  TargetRubyVersion: 2.3
