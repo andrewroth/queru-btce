@@ -22,7 +22,7 @@ module QueruBtce
       "#{key}=#{CGI::escape(val.to_s)}"
     end.join('&')
 
-    puts "CALLING TRADE API M:#{m} P:#{pair} PAYLOAD:#{payload}"
+    puts "CALLING TRADE API M:#{m} PAYLOAD:#{payload}"
 
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
