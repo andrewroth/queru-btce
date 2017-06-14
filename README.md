@@ -1,32 +1,29 @@
-# RubyBtce
+# queru-btce
 
-RubyBtce provides a simple and clean API wrapper for interfacing with the BTC-e API in a Rails app or CLI.
+KISS BTC-E API Access from Ruby.
+No config file and no framework dependency.
 
 ## Installation
 
-Add this line to your application's Gemfile:
+Gemfile:
 
-    gem 'RubyBtce'
+  gem 'queru-btce'
 
-And then execute:
+Execute:
 
-    $ bundle
+  $ bundle
 
-Or install it yourself as:
+Or install:
 
-    $ gem install RubyBtce
+  $ gem install queru-btce
 
-Add the following file to `/config`, and name it `btce_api.yml`:
-
-    # /{Rails.root}/config/btce_api.yml 
-
-    key: 'your_api_key'
-    secret: 'your_api_secret'
 
 ## Usage
 
 This gem provides class methods for all public/private API methods offered by BTC-e.
-All responses will be returned in a ruby hash format, closely following the structure shown in the BTC-e API [documentation](https://btc-e.com/api/documentation).
+Responses are hashes and any errors are raised as exception, your program can handle it.
+
+[BTC-E API Documentation](https://btc-e.com/api/documentation).
 
 ### Public Methods
 
@@ -44,13 +41,13 @@ All responses will be returned in a ruby hash format, closely following the stru
 
 #### Order Book `order_book(limit)`
     RubyBtce.order_book(2).btc_usd.first.price
-    => 553 
+    => 553
 
 ### Private Methods
 
 #### Account Info `account`
     RubyBtce.account.funds.btc
-    => 0.02199302 
+    => 0.02199302
 
 #### New Trade `new_trade(opts={})`
 This method will take up the values for `rate` and `amount` in the format of a string, integer, or float. You can pass these parameters with any number of decimal places, which will automatically be cut off (not rounded) to the maximum number of places for the specific currency.
@@ -75,7 +72,7 @@ This method will take up the values for `rate` and `amount` in the format of a s
 #### Active Orders `orders(opts={})`
     @orders = RubyBtce.orders("pair" => "btc_usd")
 
-    @orders.each do |id, order| 
+    @orders.each do |id, order|
       id
       => 242304103
 
@@ -86,7 +83,7 @@ This method will take up the values for `rate` and `amount` in the format of a s
 #### Trade History `trades(opts={})`
     @trades = RubyBtce.trades("pair" => "btc_usd")
 
-    @trades.each do |id, trade| 
+    @trades.each do |id, trade|
       id
       => 35308202
 
@@ -97,7 +94,7 @@ This method will take up the values for `rate` and `amount` in the format of a s
 #### Transaction History `transactions(opts={})`
     @transactions = RubyBtce.transactions("from_id" => "242304103", "end_id" => "242304103", "order" => "ASC")
 
-    @transactions.each do |id, transaction| 
+    @transactions.each do |id, transaction|
       id
       => 56116202
 
@@ -107,8 +104,4 @@ This method will take up the values for `rate` and `amount` in the format of a s
 
 ## Contributing
 
-1. Fork it ( http://github.com/<my-github-username>/RubyBtce/fork )
-2. Create your feature branch (`git checkout -b my-new-feature`)
-3. Commit your changes (`git commit -am 'Add some feature'`)
-4. Push to the branch (`git push origin my-new-feature`)
-5. Create new Pull Request
+Pull requests, issues and comments are welcome the most of the days.

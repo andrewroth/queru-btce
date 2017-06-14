@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-# Specify your gem's dependencies in RubyBtce.gemspec
+# Specify your gem's dependencies in QueruBtce.gemspec
 gem 'hashie'
 gemspec
-
