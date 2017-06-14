@@ -13,7 +13,7 @@ module QueruBtce
     @api_secret = secret
   end
 
-  def self.trade_api(m, opts)
+  def self.trade_api(m, *opts)
     opts[:method] = m
     payload = opts.collect do |key, val|
       "#{key}=#{CGI::escape(val.to_s)}"
