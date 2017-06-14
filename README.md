@@ -48,10 +48,9 @@ You can call any BTC-e API methods this way:
 
 ```ruby
 QueruBtce.info
-
 QueruBtce.ticker(:btc_usd)
-
-QueruBtce.ticker(:btc_usd, :eth_usd)
+QueruBtce.ticker(:btc_usd).btc_usd.last
+QueruBtce.ticker(:btc_usd, :eth_usd).eth_usd.ask
 ```
 
 More docs to come.
