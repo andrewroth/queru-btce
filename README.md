@@ -10,11 +10,13 @@ KISS _BTC-e_ API Access from Ruby.
 - Really few error abstraction, exceptions are raised.
 - Nounce is enforced, I don't expect damm nounce error.
 - Tests for the public API (rake test).
+- Fast and lightweight: A small module.
+- I did used every other gem and still needing this one.
 
 ### Cons:
 
 - Not much abstraction, you should know _BTC-e_ API.
-- Its in **BETA** status. Not production tested until now.
+- Its new, so I don't know a lot of people using it in production.
 
 ## Installation
 
