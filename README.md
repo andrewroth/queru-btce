@@ -107,7 +107,7 @@ QueruBtce.cancel_order
 
 ## Tips:
 
-### Nounce error:
+### Nounce error and locking:
 
 Nounce is param required by _BTC-e_ trade api, is just an integer but the current one should be greater than the last one. I guess they require it to ensure your transactions are received in a known order, sequentially.
 
