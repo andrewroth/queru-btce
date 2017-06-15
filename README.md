@@ -48,6 +48,8 @@ Responses are objects (dot methods or hash access) and any errors are raised as 
 - [_BTC-e_ Trade API Documentation](https://btc-e.com/api/documentation)
 - [_BTC-e_ Public API Documentation](https://btc-e.com/api/3/docs)
 
+In _BTC-e_ API some methods are _CamelCase_. In this gem those method must be called in _snake_case_ format. For example `TradeHistory` becomes `QueruBtce.trade_history`.
+
 You can call any _BTC-e_ API method this way:
 
 #### Public API example:
