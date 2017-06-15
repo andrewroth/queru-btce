@@ -1,6 +1,7 @@
-# queru-btce
+# QueruBtce
 
 KISS _BTC-e_ API Access from Ruby.
+[![Gem Version](https://badge.fury.io/rb/queru_btce.svg)](https://badge.fury.io/rb/queru_btce)
 
 ### Pros:
 
