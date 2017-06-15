@@ -39,7 +39,7 @@ $ gem install queru-btce
 ## Usage
 
 This gem provides class methods for all public/private API methods offered by _BTC-e_.
-Responses are hashes and any errors are raised as exception, your program can handle it.
+Responses are objects (dot methods or hash access) and any errors are raised as exception, your program can handle it.
 
 - [_BTC-e_ Trade API Documentation](https://btc-e.com/api/documentation)
 - [_BTC-e_ Public API Documentation](https://btc-e.com/api/3/docs)
