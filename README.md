@@ -107,9 +107,9 @@ QueruBtce.cancel_order
 
 ### Nounce error:
 
-Nonce is param required by _BTC-e_ trade api, is just an integer but the current one should be greater than the last one. I guess they require it to ensure your transactions are received in a known order, sequentially.
+Nounce is param required by _BTC-e_ trade api, is just an integer but the current one should be greater than the last one. I guess they require it to ensure your transactions are received in a known order, sequentially.
 
-This gem always send a timestamp as nounce, ensuring its greater than the last one, so calls are delayed a second between. Not a problem cause API can dump you if you try to ask faster.
+This gem always send a timestamp as nounce, ensuring its greater than the last one, so calls are delayed a second between. Not a real problem because API can dump you out when try to ask faster.
 
 But if you are calling the API from more than one process, there's no locking mechanism in gem (maybe in the future) and you need to implement a lock to prevent making two calls at once. A cache key, or distributed message can do the work, even a semaphore file locking.
 
