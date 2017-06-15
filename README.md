@@ -75,7 +75,7 @@ QueruBtce.depth
 QueruBtce.trades
 ```
 
-#### Private API:
+#### Private API example:
 ```ruby
 QueruBtce.credentials key: 'mykey', secret: 'mysecret'
 my_info = QueruBtce.get_info
