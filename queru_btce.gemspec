@@ -21,7 +21,7 @@ Gem::Specification.new do |spec|
 
   spec.required_ruby_version = '>= 2.3'
 
-  spec.add_dependency 'json', '~> 2.1'
+  spec.add_dependency 'json', '>= 1.6'
   spec.add_dependency 'rubysl-ostruct', '~> 2.1'
 
   spec.add_development_dependency 'bundler', '~> 1.5'
@@ -29,3 +29,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'minitest', '~> 5.1'
   spec.add_development_dependency 'shoulda', '~> 3.5'
 end
+
