@@ -1,11 +1,12 @@
 # QueruBtce
 
-KISS _BTC-e_ API Access from Ruby.
+KISS _BTC-e_ and now _wex.nz_ API Access from Ruby.
 
 [![Gem Version](https://badge.fury.io/rb/queru_btce.svg)](https://badge.fury.io/rb/queru_btce)
 
 ### Pros:
 
+- It supports _wex.nz_, former _BTC-E_.
 - No config file and no framework dependency.
 - No weird abstractions, you can follow _BTC-e_ API specs.
 - Returns an object, keys are methods.
