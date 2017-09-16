@@ -24,7 +24,7 @@ module QueruBtce
 
     signature = OpenSSL::HMAC.hexdigest('sha512', @api_secret, payload)
 
-    Net::HTTP.start('btc-e.com', 443, use_ssl: true) do |http|
+    Net::HTTP.start('wex.nz', 443, use_ssl: true) do |http|
       headers = { 'Sign': signature, 'Key': @api_key }
       response = http.post('/tapi', payload, headers).body
       JSON.parse response, object_class: OpenStruct
@@ -38,9 +38,9 @@ module QueruBtce
   def self.public_api(m, *pair)
     if pair
       pair = pair.join('-') if pair.is_a? Array
-      JSON.parse open("https://btc-e.com/api/3/#{m}/#{pair}").read, object_class: OpenStruct
+      JSON.parse open("https://wex.nz/api/3/#{m}/#{pair}").read, object_class: OpenStruct
     else
-      JSON.parse open("https://btc-e.com/api/3/#{m}").read, object_class: OpenStruct
+      JSON.parse open("https://wex.nz/api/3/#{m}").read, object_class: OpenStruct
     end
   rescue OpenURI::HTTPError => e
     raise "BTC-e API down? #{e}"
