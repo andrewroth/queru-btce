@@ -45,8 +45,8 @@ $ gem install queru-btce
 This gem provides class methods for all public/private API methods offered by _BTC-e_.
 Responses are objects (dot methods or hash access) and any errors are raised as exception, your program can handle it.
 
-- [_BTC-e_ Trade API Documentation](https://btc-e.com/api/documentation)
-- [_BTC-e_ Public API Documentation](https://btc-e.com/api/3/docs)
+- [_BTC-e_ Trade API Documentation](https://wex.nz/api/documentation)
+- [_BTC-e_ Public API Documentation](https://wex.nz/api/3/docs)
 
 In _BTC-e_ API some methods are _CamelCase_. In this gem those method must be called in _snake_case_ format. For example `TradeHistory` becomes `QueruBtce.trade_history`.
 
