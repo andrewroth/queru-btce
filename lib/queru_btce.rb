@@ -62,7 +62,9 @@ module QueruBtce
       cancel_order: 'CancelOrder',
       active_orders: 'ActiveOrders',
       trans_history: 'TransHistory',
-      trade_history: 'TradeHistory'
+      trade_history: 'TradeHistory',
+      coin_deposit_address: 'CoinDepositAddress',
+      withdraw_coin: 'WithdrawCoin'
     }
   end
 
